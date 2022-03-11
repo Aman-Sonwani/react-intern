@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import axios from 'axios';
+
+
+axios.defaults.baseURL = 'https://flutter-assignment-api.herokuapp.com/v1';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
